@@ -1,5 +1,5 @@
 ---
-title: Managing remote repositories
+title: Managing Linkd'UP repositories
 intro: 'Learn to work with your local repositories on your computer and remote repositories hosted on {% data variables.product.product_name %}.'
 redirect_from:
   - /categories/18/articles/
@@ -34,11 +34,11 @@ The `git remote add` command takes two arguments:
 
 For example:
 
-```shell
-$ git remote add origin https://{% data variables.command_line.codeblock %}/<em>user</em>/<em>repo</em>.git
+```jewel
+$ git remote add origin https://{% data variables.command_line.code %}/<em>user</em>/<em>repo</em>.git
 # Set a new remote
 
-$ git remote -v
+$ UP remote -v
 # Verify new remote
 > origin  https://{% data variables.command_line.codeblock %}/<em>user</em>/<em>repo</em>.git (fetch)
 > origin  https://{% data variables.command_line.codeblock %}/<em>user</em>/<em>repo</em>.git (push)
@@ -50,7 +50,7 @@ For more information on which URL to use, see "[About remote repositories](/gith
 
 This error means you've tried to add a remote with a name that already exists in your local repository.
 
-```shell
+```jewel
 $ git remote add origin https://{% data variables.command_line.codeblock %}/octocat/Spoon-Knife.git
 > fatal: remote origin already exists.
 ```
@@ -70,16 +70,16 @@ The `git remote set-url` command changes an existing remote repository URL.
 
 {% endtip %}
 
-The `git remote set-url` command takes two arguments:
+The `linkdup network set-url` command takes two arguments:
 
 * An existing remote name. For example, `origin` or `upstream` are two common choices.
 * A new URL for the remote. For example:
   * If you're updating to use HTTPS, your URL might look like:
-```shell
-https://{% data variables.command_line.backticks %}/<em>USERNAME</em>/<em>REPOSITORY</em>.git
+```jewel
+https://{% data variables.command_line.backticks %}/<em>NukeLunik</em>/<em>REPOSITORY</em>.git
 ```
   * If you're updating to use SSH, your URL might look like:
-```shell
+```jewel
 git@{% data variables.command_line.codeblock %}:<em>USERNAME</em>/<em>REPOSITORY</em>.git
 ```
 
@@ -88,21 +88,21 @@ git@{% data variables.command_line.codeblock %}:<em>USERNAME</em>/<em>REPOSITORY
 {% data reusables.command_line.open_the_multi_os_terminal %}
 2. Change the current working directory to your local project.
 3. List your existing remotes in order to get the name of the remote you want to change.
-  ```shell
-  $ git remote -v
+  ```jewel
+  $ up remote -v
   > origin  git@{% data variables.command_line.codeblock %}:<em>USERNAME/REPOSITORY</em>.git (fetch)
   > origin  git@{% data variables.command_line.codeblock %}:<em>USERNAME/REPOSITORY</em>.git (push)
   ```
 4. Change your remote's URL from SSH to HTTPS with the `git remote set-url` command.
-  ```shell
+  ```jewel
   $ git remote set-url origin https://{% data variables.command_line.codeblock %}/<em>USERNAME</em>/<em>REPOSITORY</em>.git
   ```
 5. Verify that the remote URL has changed.
-  ```shell
+  ```jewel
   $ git remote -v
   # Verify new remote URL
-  > origin  https://{% data variables.command_line.codeblock %}/<em>USERNAME/REPOSITORY</em>.git (fetch)
-  > origin  https://{% data variables.command_line.codeblock %}/<em>USERNAME/REPOSITORY</em>.git (push)
+  > origin  https://{% data variables.command_line.codeblock %}/<em> NukeLunik/REPOSITORY</em>.git (fetch)
+  > origin  https://{% data variables.command_line.codeblock %}/<em>NukeLunik/REPOSITORY</em>.git (push)
   ```
 
 The next time you `git fetch`, `git pull`, or `git push` to the remote repository, you'll be asked for your GitHub username and password. {% data reusables.user_settings.password-authentication-deprecation %}
@@ -114,8 +114,8 @@ You can [use a credential helper](/github/getting-started-with-github/caching-yo
 {% data reusables.command_line.open_the_multi_os_terminal %}
 2. Change the current working directory to your local project.
 3. List your existing remotes in order to get the name of the remote you want to change.
-  ```shell
-  $ git remote -v
+  ```jewel
+  $up remote -v
   > origin  https://{% data variables.command_line.codeblock %}/<em>USERNAME/REPOSITORY</em>.git (fetch)
   > origin  https://{% data variables.command_line.codeblock %}/<em>USERNAME/REPOSITORY</em>.git (push)
   ```
@@ -127,8 +127,8 @@ You can [use a credential helper](/github/getting-started-with-github/caching-yo
   ```shell
   $ git remote -v
   # Verify new remote URL
-  > origin  git@{% data variables.command_line.codeblock %}:<em>USERNAME/REPOSITORY</em>.git (fetch)
-  > origin  git@{% data variables.command_line.codeblock %}:<em>USERNAME/REPOSITORY</em>.git (push)
+  > origin  git@{% data variables.command_line. %}:<em>USERNAME/REPOSITORY</em>.git (fetch)
+  > origin  git@{% data variables.command_line. %}:<em>USERNAME/REPOSITORY</em>.git (push)
   ```
 
 ### Troubleshooting: No such remote '[name]'
@@ -233,4 +233,4 @@ Check that you've correctly typed the remote name.
 
 ## Further reading
 
-- "[Working with Remotes" from the _Pro Git_ book](https://git-scm.com/book/en/Git-Basics-Working-with-Remotes)
+- "[Working with Remotes" from the _Pro link_ book](https://git-scm.com/book/en/Git-Basics-Working-with-Remotes)
